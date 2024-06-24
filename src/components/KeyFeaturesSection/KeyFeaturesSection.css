@@ -1,0 +1,73 @@
+/* src/components/KeyFeaturesSection/KeyFeaturesSection.css */
+.key-features{
+  background-color: white;
+  padding-bottom:140px;
+}
+.key-features-section {
+  margin: 0 10%;
+
+}
+.key-feature-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 10px 10px 20px #d1d1d1, -10px -10px 20px #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.key-feature-card:hover {
+  transform: scale(1.05); /* Zoom in effect on hover */
+  box-shadow: 20px 20px 40px #c1c1c1, -20px -20px 40px #ffffff;
+}
+
+.key-feature-icon {
+  margin-bottom: 20px;
+  color: #3956de; /* Adjust icon color as per your design */
+  transition: color 0.3s ease;
+}
+
+.key-feature-card:hover .key-feature-icon {
+  color: #1d3bb8; /* Darker color on hover */
+}
+
+.key-feature-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.key-feature-card:hover .key-feature-title {
+  color: #1d3bb8; /* Change title color on hover */
+}
+
+.key-feature-text {
+  font-size: 1rem;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.key-feature-card:hover .key-feature-text {
+  color: #444; /* Slightly darker text on hover */
+}
+
+@media (max-width: 960px) {
+  .key-feature-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .key-feature-title {
+    font-size: 1.2rem;
+  }
+}

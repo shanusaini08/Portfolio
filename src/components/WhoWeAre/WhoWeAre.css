@@ -1,0 +1,42 @@
+/* src/components/WhoWeAre/WhoWeAre.css */
+.who-we-are-section {
+  padding: 40px 10%;
+  padding-top: 80px;
+  background-color: white;
+}
+
+.who-we-are-section h2{
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.who-we-are-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.who-we-are-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+.who-we-are-content {
+  text-align: left;
+}
+
+.who-we-are-content p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .who-we-are-content {
+    text-align: center;
+  }
+}

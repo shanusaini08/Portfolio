@@ -1,0 +1,23 @@
+/* src/components/Navbar/Navbar.css */
+.menu-desktop {
+  display: flex;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 760px) {
+  .menu-desktop {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+}

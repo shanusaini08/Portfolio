@@ -1,0 +1,167 @@
+.poster-section {
+
+  display: flex;
+ margin:auto;
+  height: 600px; /* Adjust height as needed */
+  text-align: left;
+}
+
+.poster {
+  min-width: 100%;
+  max-width: 100%;
+  background: linear-gradient(90deg, #021048, #1e38a3) !important;
+}
+
+.poster-slide {
+  display: flex;
+  flex-direction: column; /* Stack items vertically by default */
+  height: 100%;
+}
+
+.poster-image {
+  flex: 1;
+  background: url('../../assets/poster5.png') center center/cover no-repeat;
+  width: 100%; /* Ensure image fills its container */
+  min-width: 80%; /* Ensure image scales properly */
+  max-width: 100%; /* Ensure image scales properly */
+  height: auto; /* Auto adjust height */
+}
+
+.poster-text-overlay {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: flex-start; /* Left align text */
+  padding: 20px;
+  max-width: 60%; /* Ensure image scales properly */
+  min-width: 60%; /* Ensure image scales properly */
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: left; /* Left align text */
+}
+
+.poster-text-overlay p {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0; /* Remove default margin */
+}
+
+@media (min-width: 1260px) {
+  .poster-section {
+    width: 90%; /* Ensure content covers 90% of the width */
+  }
+
+  .poster-slide {
+    flex-direction: row; /* Display items side-by-side on larger screens */
+  }
+  .poster-text-overlay p {
+    font-size: 48px;
+    font-weight: 800;
+    margin: 0; /* Remove default margin */
+  }
+  .poster-text-overlay {
+    width: 50%; /* Take up 50% of the width */
+    padding-right: 20px; /* Add some spacing between text and image */
+  }
+  
+  .poster-image {
+    width: 50%; /* Take up 50% of the width */
+    max-width: 100%; /* Ensure image scales properly */
+  }
+}
+
+@media (max-width: 1260px) {
+  .poster-section {
+    width: 90%; /* Ensure content covers 90% of the width */
+  }
+
+  .poster-slide {
+    flex-direction: row; /* Display items side-by-side on larger screens */
+  }
+  .poster-text-overlay p {
+    font-size: 40px; /* Adjusted font size for medium screens */
+    font-weight: 600;
+  }
+  .poster-text-overlay {
+    width: 50%; /* Take up 50% of the width */
+    padding-right: 20px; /* Add some spacing between text and image */
+  }
+  
+  .poster-image {
+    width: 50%; /* Take up 50% of the width */
+    max-width: 100%; /* Ensure image scales properly */
+  }
+}
+
+@media (max-width: 1040px) {
+  .poster-section {
+    width: 90%; /* Ensure content covers 90% of the width */
+  }
+
+  .poster-slide {
+    flex-direction: row; /* Display items side-by-side on larger screens */
+  }
+
+  .poster-text-overlay {
+    width: 30%; /* Take up 30% of the width */
+    padding-right: 20px; /* Add spacing between text and image */
+  }
+
+  .poster-image {
+    width: 70%; /* Take up 70% of the width */
+    max-width: 100%; /* Ensure image scales properly */
+  }
+
+  .poster-text-overlay p {
+    font-size: 36px; /* Adjusted font size for screens up to 1040px */
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 988px) {
+  .poster-text-overlay {
+    max-width: 70%; /* Adjusted max width for smaller screens */
+  }
+
+  .poster-text-overlay p {
+    font-size: 32px; /* Smaller font size for screens up to 800px */
+    font-weight: 500;
+  }
+}
+@media (max-width: 904) {
+  .poster-text-overlay {
+    max-width: 70%; /* Adjusted max width for smaller screens */
+  }
+
+  .poster-text-overlay p {
+    font-size: 32px; /* Smaller font size for screens up to 800px */
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 855px) {
+  .poster-slide {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .poster-text-overlay {
+    min-width: 100%; /* Take up 100% of the width */
+    max-width: 100%; /* Take up 100% of the width */
+    padding-right: 0; /* Remove padding between text and image */
+    text-align: center; /* Center text */
+    align-items: center; /* Center items horizontally */
+  }
+  
+  .poster-image {
+    display:flex;
+    align-items: center; /* Center items horizontally */
+    min-width: 100%; /* Take up 100% of the width */
+    max-width: 100%; /* Take up 100% of the width */
+  }
+
+  .poster-text-overlay p {
+    font-size: 38px; /* Reduced font size for smaller screens */
+    font-weight: 400;
+  }
+}
