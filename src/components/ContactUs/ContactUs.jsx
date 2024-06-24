@@ -66,7 +66,7 @@ const ContactUs = () => {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`
     );
-    window.location.href = `mailto:rcoirislogics@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:arcoirislogics@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
