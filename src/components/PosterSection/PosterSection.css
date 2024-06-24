@@ -165,3 +165,37 @@
     font-weight: 400;
   }
 }
+
+@media (max-width: 600px) {
+  .poster-section {
+    display: flex;
+    margin:auto;
+    height: 600px; /* Adjust height as needed */
+    text-align: left;
+    margin-top:-30px;
+    padding-right:30px;
+  }
+  .poster-slide {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .poster-text-overlay {
+    min-width: 100%; /* Take up 100% of the width */
+    max-width: 100%; /* Take up 100% of the width */
+    padding-right: 0; /* Remove padding between text and image */
+    text-align: center; /* Center text */
+    align-items: center; /* Center items horizontally */
+  }
+  
+  .poster-image {
+    display:flex;
+    align-items: center; /* Center items horizontally */
+    min-width: 100%; /* Take up 100% of the width */
+    max-width: 100%; /* Take up 100% of the width */
+  }
+
+  .poster-text-overlay p {
+    font-size: 38px; /* Reduced font size for smaller screens */
+    font-weight: 400;
+  }
+}

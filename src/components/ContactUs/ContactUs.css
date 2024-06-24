@@ -1,6 +1,7 @@
 /* src/components/ContactUs/ContactUs.css */
 .contact-us {
   background-color:#f1f7fd !important;
+  margin-top: -23px;
 }
 .contact-us-section {
   padding: 70px 0;

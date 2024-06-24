@@ -6,7 +6,7 @@
 }
 
 .our-latest-projects {
-  margin-top: 0px;
+  margin-top: -23px;
   background-color: white;
 }
 
@@ -92,5 +92,10 @@
   .our-latest-projects-section {
     margin: 20px 5%; /* Adjust margin for smaller screens */
     width: 90%; /* Adjust width for smaller screens */
+  }
+  .project-technologies {
+    text-align: left;
+    color: #666;
+    padding-bottom: 30px;
   }
 }
