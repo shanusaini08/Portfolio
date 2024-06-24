@@ -1,9 +1,9 @@
 {
   "name": "Portfolio",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://shanusaini08.github.io/Portfolio",
+  "homepage": "https://shanusaini08.github.io/portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
