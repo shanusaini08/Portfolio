@@ -5,7 +5,6 @@ import { faDesktop, faMobileAlt, faPalette, faCloud, faChartBar, faBullhorn } fr
 import './services.css';
 
 const ServicesSection = () => {
-  // Sample service data
   const services = [
     {
       title: 'Web Development',

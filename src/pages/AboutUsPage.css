@@ -1,0 +1,51 @@
+.about-us-page {
+    padding: 40px 10%;
+    padding-top: 80px;
+    background-color: white;
+  }
+  
+  .about-us-page h2 {
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .about-us-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+  }
+  
+  .about-us-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    vertical-align: middle;
+  }
+  
+  .about-us-content {
+    text-align: left;
+  }
+  
+  .about-us-content p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+  .additional-content {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .additional-content p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+  
+  @media (max-width: 600px) {
+    .about-us-content {
+      text-align: center;
+    }
+  }
+  

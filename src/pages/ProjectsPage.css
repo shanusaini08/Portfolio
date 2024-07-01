@@ -1,25 +1,20 @@
-.our-latest-projects-section {
-  padding: 40px 0;
-  margin: 0 10%;
-  width: 80%;
+/* src/pages/ProjectsPage.css */
+.projects-page {
+  padding: 40px 10%;
+  background-color: #f1f7fd;
 }
 
-.our-latest-projects {
-  margin-top: -23px;
-  background-color: white;
-}
-
-.our-latest-projects-section h2 {
+.projects-page h2 {
   text-align: center;
-  margin-bottom: 40px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 45px;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
 }
 
 .project-card {
   position: relative;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -36,8 +31,8 @@
   width: 100%;
   padding-top: 75%; /* Aspect ratio 4:3 */
   overflow: hidden;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .project-image {
@@ -75,40 +70,22 @@
 }
 
 .project-name {
-  text-align: left;
+  text-align: center;
   margin: 15px 0 10px;
   font-weight: 500;
   color: #222;
 }
 
 .project-technologies {
-  text-align: left;
+  text-align: center;
   color: #666;
-  padding-bottom: 60px;
-}
-
-.view-all-projects {
-  margin-top: 20px;
-}
-
-.view-all-projects-link {
-  color: #3956de;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.view-all-projects-link:hover {
-  text-decoration: underline;
 }
 
 @media (max-width: 600px) {
-  .our-latest-projects-section {
-    margin: 20px 5%;
-    width: 90%;
+  .projects-page {
+    padding: 20px 5%;
   }
   .project-technologies {
-    text-align: left;
-    color: #666;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
 }

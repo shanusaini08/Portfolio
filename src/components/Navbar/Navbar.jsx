@@ -3,6 +3,8 @@ import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { styled } from '@mui/system';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/arcoirislogics.jpg';
 import './Navbar.css';
 
 const NavbarContainer = styled(AppBar)(({ scroll }) => ({
@@ -15,6 +17,8 @@ const NavbarContainer = styled(AppBar)(({ scroll }) => ({
 
 const NavbarTitle = styled(Typography)({
   flexGrow: 1,
+  display: 'flex',
+  alignItems: 'center',
 });
 
 const NavbarButton = styled(Button)({
@@ -23,6 +27,11 @@ const NavbarButton = styled(Button)({
   '&:hover': {
     backgroundColor: 'transparent',
   },
+});
+
+const Logo = styled('img')({
+  marginRight: '10px',
+  height: '40px', // Adjust as needed
 });
 
 const Navbar = () => {
@@ -72,11 +81,12 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { text: 'Home', id: 'home' },
-    { text: 'Services', id: 'services' },
-    { text: 'About Us', id: 'who-we-are' },
-    { text: 'Projects', id: 'projects' },
-    { text: 'Contact Us', id: 'get-in-touch' },
+    { text: 'Home', id: 'home', link: '/Portfolio/' },
+    { text: 'About Us', id: 'who-we-are', link: '/Portfolio/' },
+    { text: 'Technologies', id: 'technologies', link: '/Portfolio/Technologies' },
+    { text: 'Services', id: 'services', link: '/Portfolio/' },
+    { text: 'Projects', id: 'projects', link: '/Portfolio/Project' },
+    { text: 'Contact Us', id: 'get-in-touch', link: '/Portfolio/' },
   ];
 
   return (
@@ -84,12 +94,18 @@ const Navbar = () => {
       <Container maxWidth="lg">
         <Toolbar>
           <NavbarTitle variant="h6">
+            <Logo src={logo} alt="Arcoiris Logics Logo" />
             Arcoiris Logics
           </NavbarTitle>
           {!isMobileView && (
             <div className="menu-desktop">
               {menuItems.map((item) => (
-                <NavbarButton key={item.text} onClick={() => scrollToSection(item.id)}>
+                <NavbarButton
+                  key={item.text}
+                  component={Link}
+                  to={item.link}
+                  onClick={() => item.id !== 'home' && item.id !== 'technologies' && scrollToSection(item.id)}
+                >
                   {item.text}
                 </NavbarButton>
               ))}
@@ -106,7 +122,13 @@ const Navbar = () => {
             </div>
             <List>
               {menuItems.map((item) => (
-                <ListItem button key={item.text} onClick={() => scrollToSection(item.id)}>
+                <ListItem
+                  button
+                  key={item.text}
+                  component={Link}
+                  to={item.link}
+                  onClick={() => item.id !== 'home' && item.id !== 'technologies' && scrollToSection(item.id)}
+                >
                   <ListItemText primary={item.text} />
                 </ListItem>
               ))}

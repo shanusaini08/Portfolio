@@ -1,20 +1,16 @@
 .services-heading {
   margin: 40px 10%;
   padding: 40px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #021048; /* Dark blue color for heading */
 }
 
 .services-section {
   padding: 40px 10%;
-  margin-bottom: 10px; /* Added margin bottom to match the top margin */
-  background-color:#f1f7fd !important;
-}
-
-.services-section h4 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 40px;
-  font-weight: 600;
+  margin-bottom: 10px;
+  background-color: #f1f7fd;
 }
 
 .services-grid {
@@ -29,7 +25,7 @@
   width: 100%;
   background-color: #3956de;
   color: #fff;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
   border-radius: 10px;
   margin-bottom: 20px;
   overflow: hidden;
@@ -38,7 +34,7 @@
 
 .service-card:hover {
   transform: translateY(-10px);
-  background-color: #3946de;
+  background: linear-gradient(90deg, #021048, #1e38a3); /* Linear gradient on hover */
   color: #fff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -60,19 +56,24 @@
 
 .service-icon {
   color: #3956de;
+  transition: color 0.3s ease-in-out;
+}
+
+.service-card:hover .service-icon {
+  color: #3956de;
 }
 
 .service-title {
   text-align: center;
   margin-bottom: 16px;
   font-weight: 600;
-  font-size: 1.25rem; /* Increase font size for title */
+  font-size: 1.25rem;
 }
 
 .service-description {
   text-align: center;
   padding: 0 20px;
-  font-size: 1rem; /* Ensure readability */
+  font-size: 1rem;
   transition: color 0.3s ease-in-out;
 }
 
