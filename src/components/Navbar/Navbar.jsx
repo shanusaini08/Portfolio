@@ -82,7 +82,7 @@ const Navbar = () => {
 
   const menuItems = [
     { text: 'Home', id: 'home', link: '/Portfolio/' },
-    { text: 'About Us', id: 'who-we-are', link: '/Portfolio/' },
+    { text: 'About Us', id: 'who-we-are', link: '/Portfolio/About-Us' },
     { text: 'Technologies', id: 'technologies', link: '/Portfolio/Technologies' },
     { text: 'Services', id: 'services', link: '/Portfolio/' },
     { text: 'Projects', id: 'projects', link: '/Portfolio/Project' },
