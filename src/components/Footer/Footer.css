@@ -1,6 +1,6 @@
 /* src/components/Footer/Footer.css */
 .footer {
-  background-color:#0b163f;
+  background: linear-gradient(90deg, #021048, #1e38a3);;
   color: #fff;
   padding: 40px 0;
   text-align: left;

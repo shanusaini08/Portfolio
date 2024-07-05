@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Card, CardContent, Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDesktop, faMobileAlt, faPalette, faCloud, faChartBar, faBullhorn } from '@fortawesome/free-solid-svg-icons';
+import { faDesktop, faMobileAlt, faPalette, faMobile, faLock, faCode } from '@fortawesome/free-solid-svg-icons';
 import './services.css';
 
 const ServicesSection = () => {
@@ -12,8 +12,13 @@ const ServicesSection = () => {
       icon: faDesktop,
     },
     {
-      title: 'Mobile App Development',
-      description: 'Creating user-friendly mobile applications for both Android and iOS platforms, tailored to meet your business needs. Our apps are designed with intuitive interfaces and robust backend integration.',
+      title: 'Android Development',
+      description: 'Creating user-friendly mobile applications for the Android platform, tailored to meet your business needs. Our apps are designed with intuitive interfaces and robust backend integration.',
+      icon: faMobile,
+    },
+    {
+      title: 'iOS Development',
+      description: 'Creating user-friendly mobile applications for the iOS platform, tailored to meet your business needs. Our apps are designed with intuitive interfaces and robust backend integration.',
       icon: faMobileAlt,
     },
     {
@@ -22,19 +27,14 @@ const ServicesSection = () => {
       icon: faPalette,
     },
     {
-      title: 'Cloud Services',
-      description: 'Offering scalable cloud solutions to help you manage your business operations more efficiently and securely. From cloud migration to maintenance, we ensure seamless integration and optimal performance.',
-      icon: faCloud,
+      title: 'Blockchain',
+      description: 'Implementing blockchain technology to provide secure, decentralized solutions for various industries. We offer services from smart contract development to blockchain integration.',
+      icon: faLock,
     },
     {
-      title: 'Digital Marketing',
-      description: 'Providing comprehensive digital marketing strategies to enhance your online presence and drive more traffic. We utilize SEO, SEM, and social media marketing to maximize your digital reach.',
-      icon: faBullhorn,
-    },
-    {
-      title: 'Data Analysis',
-      description: 'Performing insightful data analysis to help you make informed decisions and drive business growth. From data mining to predictive analytics, we provide actionable insights for strategic planning.',
-      icon: faChartBar,
+      title: 'Python Stack Development',
+      description: 'Developing robust applications using Python and its frameworks. We specialize in building scalable and efficient backend solutions to support your business needs.',
+      icon: faCode,
     },
   ];
 

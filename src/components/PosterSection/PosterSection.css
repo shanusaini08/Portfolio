@@ -1,44 +1,46 @@
 .poster-section {
-
   display: flex;
- margin:auto;
+  margin: auto;
   height: 600px; /* Adjust height as needed */
   text-align: left;
+  position: relative; /* To position video and text overlay correctly */
 }
 
 .poster {
   min-width: 100%;
   max-width: 100%;
-  background: linear-gradient(90deg, #021048, #1e38a3) !important;
+  position: relative; /* To position video and text overlay correctly */
+}
+
+.poster video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire background */
+  z-index: -1; /* Place video behind text */
 }
 
 .poster-slide {
   display: flex;
   flex-direction: column; /* Stack items vertically by default */
   height: 100%;
-}
-
-.poster-image {
-  flex: 1;
-  background: url('../../assets/poster5.png') center center/cover no-repeat;
-  width: 100%; /* Ensure image fills its container */
-  min-width: 80%; /* Ensure image scales properly */
-  max-width: 100%; /* Ensure image scales properly */
-  height: auto; /* Auto adjust height */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  color: white;
 }
 
 .poster-text-overlay {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center content vertically */
-  align-items: flex-start; /* Left align text */
+  align-items: center; /* Center content horizontally */
   padding: 20px;
-  max-width: 60%; /* Ensure image scales properly */
-  min-width: 60%; /* Ensure image scales properly */
   color: white;
   font-family: 'Poppins', sans-serif;
-  text-align: left; /* Left align text */
+  text-align: center; /* Center text */
+  z-index: 1; /* Ensure text is above the video */
 }
 
 .poster-text-overlay p {
@@ -52,22 +54,9 @@
     width: 90%; /* Ensure content covers 90% of the width */
   }
 
-  .poster-slide {
-    flex-direction: row; /* Display items side-by-side on larger screens */
-  }
   .poster-text-overlay p {
     font-size: 48px;
     font-weight: 800;
-    margin: 0; /* Remove default margin */
-  }
-  .poster-text-overlay {
-    width: 50%; /* Take up 50% of the width */
-    padding-right: 20px; /* Add some spacing between text and image */
-  }
-  
-  .poster-image {
-    width: 50%; /* Take up 50% of the width */
-    max-width: 100%; /* Ensure image scales properly */
   }
 }
 
@@ -76,21 +65,9 @@
     width: 90%; /* Ensure content covers 90% of the width */
   }
 
-  .poster-slide {
-    flex-direction: row; /* Display items side-by-side on larger screens */
-  }
   .poster-text-overlay p {
     font-size: 40px; /* Adjusted font size for medium screens */
     font-weight: 600;
-  }
-  .poster-text-overlay {
-    width: 50%; /* Take up 50% of the width */
-    padding-right: 20px; /* Add some spacing between text and image */
-  }
-  
-  .poster-image {
-    width: 50%; /* Take up 50% of the width */
-    max-width: 100%; /* Ensure image scales properly */
   }
 }
 
@@ -99,18 +76,8 @@
     width: 90%; /* Ensure content covers 90% of the width */
   }
 
-  .poster-slide {
-    flex-direction: row; /* Display items side-by-side on larger screens */
-  }
-
   .poster-text-overlay {
     width: 30%; /* Take up 30% of the width */
-    padding-right: 20px; /* Add spacing between text and image */
-  }
-
-  .poster-image {
-    width: 70%; /* Take up 70% of the width */
-    max-width: 100%; /* Ensure image scales properly */
   }
 
   .poster-text-overlay p {
@@ -120,20 +87,6 @@
 }
 
 @media (max-width: 988px) {
-  .poster-text-overlay {
-    max-width: 70%; /* Adjusted max width for smaller screens */
-  }
-
-  .poster-text-overlay p {
-    font-size: 32px; /* Smaller font size for screens up to 800px */
-    font-weight: 500;
-  }
-}
-@media (max-width: 904) {
-  .poster-text-overlay {
-    max-width: 70%; /* Adjusted max width for smaller screens */
-  }
-
   .poster-text-overlay p {
     font-size: 32px; /* Smaller font size for screens up to 800px */
     font-weight: 500;
@@ -152,13 +105,6 @@
     text-align: center; /* Center text */
     align-items: center; /* Center items horizontally */
   }
-  
-  .poster-image {
-    display:flex;
-    align-items: center; /* Center items horizontally */
-    min-width: 100%; /* Take up 100% of the width */
-    max-width: 100%; /* Take up 100% of the width */
-  }
 
   .poster-text-overlay p {
     font-size: 38px; /* Reduced font size for smaller screens */
@@ -169,12 +115,13 @@
 @media (max-width: 600px) {
   .poster-section {
     display: flex;
-    margin:auto;
+    margin: auto;
     height: 600px; /* Adjust height as needed */
     text-align: left;
-    margin-top:-30px;
-    padding-right:30px;
+    margin-top: -30px;
+    padding-right: 30px;
   }
+
   .poster-slide {
     flex-direction: column; /* Stack items vertically */
   }
@@ -185,13 +132,6 @@
     padding-right: 0; /* Remove padding between text and image */
     text-align: center; /* Center text */
     align-items: center; /* Center items horizontally */
-  }
-  
-  .poster-image {
-    display:flex;
-    align-items: center; /* Center items horizontally */
-    min-width: 100%; /* Take up 100% of the width */
-    max-width: 100%; /* Take up 100% of the width */
   }
 
   .poster-text-overlay p {

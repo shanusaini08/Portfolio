@@ -25,15 +25,9 @@ const AboutUsPage = () => {
       <div className="additional-content">
       <Typography variant="body1" paragraph>
             By developing cutting-edge technologies and making established products more appealing to clients with superior digital abilities, Arcoiris Logics helps brands generate value across the entire product lifecycle. We focus on enhancing user interactions in a digital-first world, guiding businesses to become more application-oriented, innovate within budgetary constraints, and rapidly deploy the latest digital products and applications.
-          </Typography>
-          <Typography variant="body1" paragraph>
-            To help organizations succeed online, we offer complete web and mobile app development that integrates cutting-edge modern technologies like blockchain, IoT, AR/VR, AI, big data, and machine learning. We provide cutting-edge digital solutions with the ideal fusion of technology, innovation, and skill. We support large-scale enterprises, SMEs, and startups in modernizing all aspects of their business operations, from planning to implementation.
-          </Typography>
-          <Typography variant="body1" paragraph>
-            From initial concept to successful completion, we support our clients and build up their solid online presence. Your Ideas + Our Knowledge = Highest Levels of Client Success.
-          </Typography>
-          <Typography variant="body1" paragraph>
-            Our purpose is to deliver on the promise of technology and human ingenuity. We help our clients become the next and best versions of themselves.
+            <br></br><br></br>To help organizations succeed online, we offer complete web and mobile app development that integrates cutting-edge modern technologies like blockchain, IoT, AR/VR, AI, big data, and machine learning. We provide cutting-edge digital solutions with the ideal fusion of technology, innovation, and skill. We support large-scale enterprises, SMEs, and startups in modernizing all aspects of their business operations, from planning to implementation.
+            From initial concept to successful completion, we support our clients and build up their solid online presence. <br></br><br></br>Your Ideas + Our Knowledge = Highest Levels of Client Success.
+            Our purpose is to deliver on the promise of technology and human ingenuity. We help our clients become the next and best versions of themselves.<br></br><br></br><br></br>
           </Typography>
     </div>
     </div>
