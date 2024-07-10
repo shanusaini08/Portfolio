@@ -1,13 +1,17 @@
 /* src/pages/ProjectsPage.css */
 .projects-page {
-  padding: 40px 10%;
+  padding: 70px 0;
+  margin: 0 10%;
+  padding-bottom: 100px;
   background-color: #f1f7fd;
 }
+/* src/components/ContactUs/ContactUs.css */
 
 .projects-page h2 {
   text-align: center;
   font-family: "Poppins", sans-serif;
   margin-bottom: 45px;
+  padding-bottom: 30px;
   font-weight: 600;
 }
 

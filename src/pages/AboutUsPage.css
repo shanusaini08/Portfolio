@@ -1,9 +1,10 @@
 .about-us-page {
   padding: 40px 10%;
   padding-top: 80px;
-  background-color: #021048; /* Dark background color */
+  background: linear-gradient(180deg, #021048, #1e38a3); /* Linear gradient background */
   color: white; /* Text color for better contrast */
 }
+
 
 .about-us-page h2 {
   font-family: "Poppins", sans-serif;
@@ -63,6 +64,11 @@
   .about-us-content {
     text-align: center;
   }
+  .about-us-page{
+    margin-top: -20px;
+  }
+  .about-us-page h2 {
+    text-align: center;}
 }
 
 @keyframes float {

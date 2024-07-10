@@ -1,14 +1,14 @@
 .services-heading {
-  margin: 40px 10%;
-  padding: 40px 0;
+  
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-align: center;
-  color: #021048; /* Dark blue color for heading */
+  color: #021048; 
+  margin-bottom: 16px;/* Dark blue color for heading */
 }
 
 .services-section {
-  padding: 40px 10%;
+  padding: 4px 10%;
   margin-bottom: 10px;
   background-color: #f1f7fd;
 }
@@ -95,7 +95,21 @@
   .service-title {
     font-size: 1.15rem;
   }
-
+  .services-heading , .services-section h2 {
+    margin: 40px 10% !important;
+    padding: 40px 0 !important;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    color: #021048 !important; /* Dark blue color for heading */
+  }
+  
+  .services h2{
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
   .service-description {
     font-size: 0.9rem;
   }

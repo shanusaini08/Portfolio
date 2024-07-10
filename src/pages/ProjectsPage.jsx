@@ -110,7 +110,7 @@ const ProjectsPage = () => {
   return (
     <div className="projects-page">
       <Typography variant="h4" component="h2" className="projects-title" gutterBottom>
-        OUR PROJECTS
+        Our Projects
       </Typography>
       <Grid container spacing={4}>
         {projects.map((project, index) => (

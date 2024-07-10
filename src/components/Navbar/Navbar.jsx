@@ -72,21 +72,13 @@ const Navbar = () => {
     setDrawerOpen(!drawerOpen);
   };
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setDrawerOpen(false); // Close drawer after clicking on mobile
-  };
-
   const menuItems = [
-    { text: 'Home', id: 'home', link: '/Portfolio/' },
+    { text: 'Home', link: '/Portfolio' },
     { text: 'About Us', link: '/Portfolio/About-Us' },
-    { text: 'Technologies', id: 'technologies', link: '/Portfolio/Technologies' },
-    { text: 'Services', id: 'services', link: '/Portfolio/' },
-    { text: 'Projects', id: 'projects', link: '/Portfolio/Project' },
-    { text: 'Contact Us', id: 'get-in-touch', link: '/Portfolio/' },
+    { text: 'Technologies', link: '/Portfolio/Technologies' },
+    { text: 'Services', link: '/Portfolio/Services' },
+    { text: 'Projects', link: '/Portfolio/Project' },
+    { text: 'Contact Us', link: '/Portfolio/Contact-Us' },
   ];
 
   return (
@@ -104,7 +96,6 @@ const Navbar = () => {
                   key={item.text}
                   component={Link}
                   to={item.link}
-                  onClick={() => item.id !== 'home' && item.id !== 'technologies' && scrollToSection(item.id)}
                 >
                   {item.text}
                 </NavbarButton>
@@ -127,7 +118,7 @@ const Navbar = () => {
                   key={item.text}
                   component={Link}
                   to={item.link}
-                  onClick={() => item.id !== 'home' && item.id !== 'technologies' && scrollToSection(item.id)}
+                  onClick={handleDrawerToggle}
                 >
                   <ListItemText primary={item.text} />
                 </ListItem>

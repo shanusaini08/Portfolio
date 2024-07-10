@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, Grid, Box } from '@mui/material';
 import './TechnologiesPage.css';
-import mobileImage from '../assets/technologies/mobile2.webp';
+import blockchainImage from '../assets/technologies/blockchain.png';
 import iosImage from '../assets/technologies/ios.webp';
 import androidImage from '../assets/technologies/android.webp';
 import flutterImage from '../assets/technologies/flutter.png';
@@ -16,20 +16,20 @@ import phpImage from '../assets/technologies/php3.png';
 const TechnologiesPage = () => {
   const technologies = [
     {
-      title: 'Mobile',
-      image: mobileImage,
-      description: 'We offer end-to-end mobile app development services, from ideation to deployment and maintenance. Our expertise spans iOS, Android, and cross-platform solutions, ensuring high-quality, scalable applications that meet your business goals. The services which we offer under this technology are :',
+      title: 'Blockchain',
+      image: blockchainImage, // Ensure you have the correct path to the blockchain image
+      description: 'Implementing blockchain technology to provide secure, decentralized solutions for various industries. We offer services from smart contract development to blockchain integration. The services which we offer under this technology are:',
       bulletPoints: [
-        'Native and Cross-Platform Development',
-        'UI/UX Design',
-        'Integration with Third-Party APIs',
-        'Performance Optimization',
-        'App Store Submission',
-        'Maintenance and Support',
-        'User Research and Testing',
-        'Scalability Solutions'
+        'Smart Contract Development',
+        'Decentralized Applications (DApps)',
+        'Blockchain Integration Services',
+        'Private and Public Blockchain Solutions',
+        'Tokenization Services',
+        'Blockchain Security Audits',
+        'Cryptocurrency Wallet Development',
+        'Supply Chain Blockchain Solutions'
       ],
-    },
+    },    
     { 
       title: 'iOS App Development', 
       image: iosImage, 

@@ -17,7 +17,7 @@ const Footer = () => {
                 Arcoiris Logics
               </Typography>
               <Typography variant="body2" className="footer-description">
-                Explore how Arcoiris Logics can empower your business with our expertise in Mobile & Web App Development, Blockchain, Metaverse, and AI solutions. Transform your digital strategy today!
+                Explore how Arcoiris Logics can empower your business with our expertise in Mobile & Web App Development, Blockchain, Python, and AI solutions. Transform your digital strategy today!
               </Typography>
               <Typography variant="body2" className="footer-contact">
                 <strong>Email:</strong> <a href="mailto:arcoirislogics@gmail.com">arcoirislogics@gmail.com</a>

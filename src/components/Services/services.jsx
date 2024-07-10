@@ -40,7 +40,19 @@ const ServicesSection = () => {
 
   return (
     <div id="services" className="services-section">
-      <Typography variant="h4" gutterBottom className="services-heading">
+      <Typography
+        variant="h4"
+        component="h2"
+        gutterBottom
+        style={{
+          margin: '40px 10%',
+          padding: '40px 0',
+          fontFamily: 'Poppins, sans-serif',
+          fontWeight: 600,
+          textAlign: 'center',
+          color: '#021048', // Dark blue color for heading
+        }}
+      >
         Our Services
       </Typography>
       <Grid container spacing={4} className="services-grid">
