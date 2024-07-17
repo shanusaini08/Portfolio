@@ -12,16 +12,16 @@ import ProjectsPage from './pages/ProjectsPage';
 import AboutUsPage from './pages/AboutUsPage';
 import TechnologiesPage from './pages/TechnologiesPage';
 import ServicesPage from './pages/ServicesPage';
-import ContactUsPage from './pages/ContactUsPage'; // Import ContactUsPage
+import ContactUsPage from './pages/ContactUsPage';
 import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/Portfolio" element={
+          <Route path="/" element={
             <>
               <PosterSection />
               <WhoWeAre />
@@ -31,11 +31,11 @@ function App() {
               <ContactUs id="get-in-touch" />
             </>
           } />
-          <Route path="/Portfolio/Project" element={<ProjectsPage />} />
-          <Route path="/Portfolio/About-Us" element={<AboutUsPage />} />
-          <Route path="/Portfolio/Technologies" element={<TechnologiesPage />} />
-          <Route path="/Portfolio/Services" element={<ServicesPage />} />
-          <Route path="/Portfolio/Contact-Us" element={<ContactUsPage />} /> {/* Add route for ContactUsPage */}
+          <Route path="/Project" element={<ProjectsPage />} />
+          <Route path="/About-Us" element={<AboutUsPage />} />
+          <Route path="/Technologies" element={<TechnologiesPage />} />
+          <Route path="/Services" element={<ServicesPage />} />
+          <Route path="/Contact-Us" element={<ContactUsPage />} />
         </Routes>
         <Footer />
       </div>
