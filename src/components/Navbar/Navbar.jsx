@@ -73,12 +73,12 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { text: 'Home', link: '/Portfolio' },
-    { text: 'About Us', link: '/Portfolio/About-Us' },
-    { text: 'Technologies', link: '/Portfolio/Technologies' },
-    { text: 'Services', link: '/Portfolio/Services' },
-    { text: 'Projects', link: '/Portfolio/Project' },
-    { text: 'Contact Us', link: '/Portfolio/Contact-Us' },
+    { text: 'Home', link: '/' },
+    { text: 'About Us', link: '/About-Us' },
+    { text: 'Technologies', link: '/Technologies' },
+    { text: 'Services', link: '/Services' },
+    { text: 'Projects', link: '/Project' },
+    { text: 'Contact Us', link: '/Contact-Us' },
   ];
 
   return (
