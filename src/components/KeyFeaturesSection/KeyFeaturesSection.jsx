@@ -35,7 +35,7 @@ const KeyFeaturesSection = () => {
                   Slogan
                 </Typography>
                 <Typography variant="body1" className="key-feature-text">
-                  Your Ideas + Our Knowledge = Highest Levels of Client Success.
+                   Where Ideas Become Reality.
                 </Typography>
               </CardContent>
             </Card>

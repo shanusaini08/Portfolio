@@ -20,7 +20,7 @@ const Footer = () => {
                 Explore how Arcoiris Logics can empower your business with our expertise in Mobile & Web App Development, Blockchain, Python, and AI solutions. Transform your digital strategy today!
               </Typography>
               <Typography variant="body2" className="footer-contact">
-                <strong>Email:</strong> <a href="mailto:arcoirislogics@gmail.com">arcoirislogics@gmail.com</a>
+                <strong>Email:</strong> <a href="mailto:info@arcoirislogics.in">info@arcoirislogics.in</a>
               </Typography>
             </Grid>
             <Grid item xs={12} md={6} className="footer-right">

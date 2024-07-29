@@ -4,8 +4,8 @@ import backgroundVideo from '../../assets/posters/background-video-2.mp4';
 
 const PosterSection = () => {
   const textLines = [
-    "Arcoiris Logics: Innovating with cutting-edge technologies.",
-    "Your Ideas + Our Knowledge = Highest Levels of Client Success."
+    "Arcoiris Logics : Innovating with cutting-edge technologies.",
+    "Where Ideas Become Reality."
   ];
 
   const textRef = useRef(null);
