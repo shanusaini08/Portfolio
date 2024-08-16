@@ -1,16 +1,14 @@
-.services-heading {
-  
+.services-section h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-align: center;
-  color: #021048; 
-  margin-bottom: 16px;/* Dark blue color for heading */
+  margin-bottom: 70px;
 }
 
 .services-section {
-  padding: 4px 10%;
+  padding: 70px 10%; /* Adjusted padding */
   margin-bottom: 10px;
-  background-color: #f1f7fd;
+  background-color: white;
 }
 
 .services-grid {
@@ -21,22 +19,97 @@
 }
 
 .service-card {
-  height: 320px;
   width: 100%;
-  background-color: #3956de;
-  color: #fff;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
-  border-radius: 10px;
+  background: #dde4f8 !important; /* Background color of cards */
+  color: #140c40 !important; /* Text color of cards */
+  transition: transform 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background 0.5s ease-in-out;
+  border-radius: 50%; /* Make the card circular */
   margin-bottom: 20px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Start invisible for animation */
+  transform: rotate(0deg); /* Initial rotation state */
+}
+
+/* Animation Keyframes */
+@keyframes rollInFromLeft {
+  0% {
+    transform: translateX(-100vw) rotate(-360deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rollInFromRight {
+  0% {
+    transform: translateX(100vw) rotate(360deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rollInFromTop {
+  0% {
+    transform: translateY(-100vh) rotate(-360deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rollInFromBottom {
+  0% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Animation Classes */
+.animate-1 {
+  animation: rollInFromLeft 1.2s forwards;
+}
+
+.animate-2 {
+  animation: rollInFromBottom 1.2s forwards;
+}
+
+.animate-3 {
+  animation: rollInFromRight 1.2s forwards;
+}
+
+.animate-4 {
+  animation: rollInFromTop 1.2s forwards;
+}
+
+.animate-5 {
+  animation: rollInFromLeft 1.2s forwards;
+}
+
+.animate-6 {
+  animation: rollInFromBottom 1.2s forwards;
 }
 
 .service-card:hover {
   transform: translateY(-10px);
-  background: linear-gradient(90deg, #021048, #1e38a3); /* Linear gradient on hover */
+  background: linear-gradient(90deg, #021048, #1e38a3) !important; /* Linear gradient on hover */
   color: #fff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:hover .service-title {
+  color: #fff;
 }
 
 .service-card:hover .service-description {
@@ -59,8 +132,8 @@
   transition: color 0.3s ease-in-out;
 }
 
-.service-card:hover .service-icon {
-  color: #3956de;
+.service-card:hover  {
+  color: #fff;
 }
 
 .service-title {
@@ -95,21 +168,7 @@
   .service-title {
     font-size: 1.15rem;
   }
-  .services-heading , .services-section h2 {
-    margin: 40px 10% !important;
-    padding: 40px 0 !important;
-    font-family: "Poppins", sans-serif !important;
-    font-weight: 600 !important;
-    text-align: center !important;
-    color: #021048 !important; /* Dark blue color for heading */
-  }
-  
-  .services h2{
-    text-align: center;
-    margin-bottom: 40px;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-  }
+
   .service-description {
     font-size: 0.9rem;
   }

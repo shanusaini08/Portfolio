@@ -11,6 +11,7 @@ import AboutUsPage from './pages/AboutUsPage';
 import TechnologiesPage from './pages/TechnologiesPage';
 import ServicesPage from './pages/ServicesPage';
 import ContactUsPage from './pages/ContactUsPage';
+import ScrollToTop from './components/ScrollToTop'; // Import the ScrollToTop component
 import './App.css';
 
 function App() {
@@ -18,20 +19,45 @@ function App() {
     <Router basename="/">
       <div className="App">
         <Navbar />
+        <ScrollToTop />
         <Routes>
-          <Route path="/" element={
-            <>
-              <PosterSection />
-              <WhoWeAre />
-              <KeyFeaturesSection />
-              <ServicesSection />
-              <ContactUs id="get-in-touch" />
-            </>
-          } />
-          <Route path="/About-Us" element={<AboutUsPage />} />
-          <Route path="/Technologies" element={<TechnologiesPage />} />
-          <Route path="/Services" element={<ServicesPage />} />
-          <Route path="/Contact-Us" element={<ContactUsPage />} />
+          <Route 
+            path="/" 
+            element={
+              <>
+                  <PosterSection />
+                  <WhoWeAre />
+                  <KeyFeaturesSection />
+                  <ServicesSection />
+                  <ContactUs id="get-in-touch" />
+              </>
+            } 
+          />
+          <Route 
+            path="/About-Us" 
+            element={
+                <AboutUsPage />
+            }
+          />
+          <Route 
+            path="/Technologies" 
+            element={
+                <TechnologiesPage />
+            }
+          />
+          <Route
+            path="/Services"
+            element={
+                <ServicesPage />
+            }
+          />
+          <Route
+            path="/Contact-Us"
+            element={
+
+                <ContactUsPage />
+            }
+          />
         </Routes>
         <Footer />
       </div>

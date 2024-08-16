@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { styled } from '@mui/system';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/arcoirislogics.jpg';
 import './Navbar.css';
 
@@ -21,13 +21,16 @@ const NavbarTitle = styled(Typography)({
   alignItems: 'center',
 });
 
-const NavbarButton = styled(Button)({
+const NavbarButton = styled(Button)(({ active, scroll }) => ({
   marginLeft: '16px',
   color: 'inherit', // Inherit color from parent
+  borderBottom: active ? `2px solid ${scroll ? '#021048' : '#fff'}` : 'none',
+  borderRadius: 0,
   '&:hover': {
     backgroundColor: 'transparent',
+    borderBottom: `2px solid ${scroll ? '#021048' : '#fff'}`,
   },
-});
+}));
 
 const Logo = styled('img')({
   marginRight: '10px',
@@ -38,6 +41,7 @@ const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,6 +99,8 @@ const Navbar = () => {
                   key={item.text}
                   component={Link}
                   to={item.link}
+                  scroll={scroll}
+                  active={location.pathname === item.link}
                 >
                   {item.text}
                 </NavbarButton>

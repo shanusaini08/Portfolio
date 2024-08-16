@@ -1,9 +1,16 @@
 /* src/App.css */
+
+html {
+  scroll-behavior: smooth;
+  
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(90deg, #406ef1, #406ef1);
 }
 
 .App {

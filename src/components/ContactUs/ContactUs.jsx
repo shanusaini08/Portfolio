@@ -150,7 +150,6 @@ const ContactUs = () => {
                   <Grid item xs={12}>
                     <Button
                       variant="contained"
-                      color="primary"
                       type="submit"
                       className="contact-us-button"
                     >

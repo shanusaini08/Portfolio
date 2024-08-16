@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Grid, Card, CardContent, Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDesktop, faMobileAlt, faPalette, faMobile, faLock, faCode } from '@fortawesome/free-solid-svg-icons';
+import { useInView } from 'react-intersection-observer';
 import './services.css';
 
 const ServicesSection = () => {
+  const { ref: sectionRef, inView, entry } = useInView({ triggerOnce: false, threshold: 0.1 });
+
+  // Function to handle the animation reset
+  const resetAnimation = useCallback(() => {
+    if (entry && entry.isIntersecting) {
+      const cards = document.querySelectorAll('.service-card');
+      cards.forEach((card, index) => {
+        card.classList.remove(`animate-${index + 1}`);
+        void card.offsetWidth; // Trigger a reflow
+        card.classList.add(`animate-${index + 1}`);
+      });
+    }
+  }, [entry]);
+
+  React.useEffect(() => {
+    resetAnimation();
+  }, [inView, resetAnimation]);
+
   const services = [
     {
       title: 'Web Development',
@@ -39,26 +58,14 @@ const ServicesSection = () => {
   ];
 
   return (
-    <div id="services" className="services-section">
-      <Typography
-        variant="h4"
-        component="h2"
-        gutterBottom
-        style={{
-          margin: '40px 10%',
-          padding: '40px 0',
-          fontFamily: 'Poppins, sans-serif',
-          fontWeight: 600,
-          textAlign: 'center',
-          color: '#021048', // Dark blue color for heading
-        }}
-      >
+    <div className="services-section" ref={sectionRef}>
+      <Typography variant="h4" component="h2" gutterBottom className="services-heading">
         Our Services
       </Typography>
       <Grid container spacing={4} className="services-grid">
         {services.map((service, index) => (
           <Grid item key={index} xs={12} sm={6} md={4}>
-            <Card className="service-card">
+            <Card className={`service-card service-card-${index + 1}`} data-animation={`animate-${index + 1}`}>
               <CardContent>
                 <div className="service-icon-container">
                   <FontAwesomeIcon icon={service.icon} size="3x" className="service-icon" />
